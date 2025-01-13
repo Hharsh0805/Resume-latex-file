@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Harsh Sehgal
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Define custom colors
+\definecolor{headerBlue}{RGB}{0, 51, 102}
+\definecolor{sectionColor}{RGB}{0, 51, 102}
+\definecolor{linkColor}{RGB}{0, 102, 204}
+
+% Optimized margins for single page
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.8in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Compact section formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\Large\bfseries\color{sectionColor}
+}{}{0em}{}[\color{sectionColor}\titlerule \vspace{-8pt}]
+
+\pdfgentounicode=1
+
+% Optimized custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{headerBlue}#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \multicolumn{2}{l}{\small\href{#4}{\textcolor{linkColor}{\textbf{#1}}} \hspace{-3pt} \textcolor{headerBlue}{\faGithub} \ \href{#3}{}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=-5pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape \color{headerBlue} Harsh Sehgal} \vspace{1pt} \\
+  \small 
+  \href{tel:+916388390509}{\textcolor{linkColor}{\faPhone\ +91-6388390509}} \hspace{15pt}
+  \href{mailto:sehgalharsh700@gmail.com}{\textcolor{linkColor}{\faEnvelope\ sehgalharsh700@gmail.com}} \hspace{15pt}
+  \href{https://www.linkedin.com/in/harsh-sehgal15/}{\textcolor{linkColor}{\faLinkedin\ LinkedIn}} \hspace{15pt}
+  \href{https://github.com/Hharsh0805/}{\textcolor{linkColor}{\faGithub\ GitHub}} \\
+  \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Institute of Engineering and Technology}{Dec'21 -- Jun'25}
+{B.Tech; \textbf{CGPA: 7.15}}{Lucknow, Uttar Pradesh}
+\vspace{2pt}
+\resumeSubheading
+{Mahatma Hansraj Modern School}{2020 -- 2021}
+{Higher Secondary (XII); \textbf{Percentage: 85\%}}{Jhansi, Uttar Pradesh}
+\vspace{2pt}
+\resumeSubheading
+{St. Marks College}{2018 -- 2019}
+{High School (X) ICSE; \textbf{Percentage: 80.1\%}}{Jhansi, Uttar Pradesh}
+\resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+\resumeSubheading
+{InternPe}{Sep'24 -- Oct'24}
+{Web Development Intern}{Remote}
+\resumeItemListStart
+\resumeItem{Engineered and launched a feature-rich job board platform using the MERN stack, facilitating \textbf{250+} daily job postings while maintaining \textbf{90\%} uptime.}
+\resumeItem{Streamlined database queries and established caching strategies, reducing API response time from \textbf{200ms to 40ms} for enhanced user satisfaction.}
+\resumeItemListEnd
+\vspace{8pt}
+\resumeSubheading
+{Eyantra (IIT Bombay)}{Feb'22 -- Oct'22}
+{EYRC Competition - Team Member}{Remote}
+\resumeItemListStart
+\resumeItem{Spearheaded the development of "Hola Bot," an advanced robotic system powered by ROS and Python, achieving high precision in automated drawing tasks.}
+\resumeItem{Customized PID control algorithms within the ROS Navigation Stack to achieve sub-millimeter precision in robotic motion paths.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{TECHNICAL PROJECTS}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Dal-ivery - Full Stack Food Delivery Platform}}{}
+{https://github.com/Hharsh0805/Dal-ivery}
+{https://food-delivery-app-gilt-six.vercel.app/}
+\resumeItemListStart
+\resumeItem{Architected and deployed a MERN stack application integrated with Redis caching on AWS, serving \textbf{200+} active users daily.}
+\resumeItem{Integrated Stripe API for seamless and secure payment processing, reducing checkout abandonment by \textbf{40\%}.}
+\resumeItem{Engineered a real-time order tracking system using WebSocket and Socket.io, maintaining an average latency of \textbf{30ms}.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{HealthAI App}}{}
+{https://github.com/Hharsh0805/HealthAI-App}
+{https://health-ml-app-ui.vercel.app/}
+\resumeItemListStart
+\resumeItem{Created an AI-powered health diagnostic platform leveraging the Gemini API for real-time, data-driven health predictions, improving diagnostic precision by \textbf{25\%}.}
+\resumeItem{Designed a machine learning pipeline for anomaly detection, achieving a \textbf{92\%} accuracy rate in identifying potential health risks.}
+\resumeItem{Crafted and deployed a highly responsive, device-agnostic UI using React and Material-UI, resulting in a \textbf{40\%} boost in user engagement.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Dynamic Portfolio Website}}{}
+{https://github.com/Hharsh0805/Portfolio}
+{https://portfolio-six-inky-47.vercel.app/}
+\resumeItemListStart
+\resumeItem{Built an interactive portfolio site using React.js and TailwindCSS, achieving an \textbf{85/100} performance score on Google Lighthouse.}
+\resumeItem{Incorporated GitHub API to fetch real-time project updates and established SEO strategies to maximize search visibility.}
+\resumeItem{Optimized website imagery and codebase for a \textbf{40\%} increase in organic traffic and a \textbf{2-second} average load time.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.0in, label={}, itemsep=1pt]
+  \item \textbf{Programming Languages:} \textcolor{headerBlue}{Python}, \textcolor{headerBlue}{JavaScript (ES6+)}, TypeScript, Java, SQL
+  \item \textbf{Web Technologies:} \textcolor{headerBlue}{React.js}, \textcolor{headerBlue}{Node.js}, Express.js, HTML5, CSS3, WebSocket
+  \item \textbf{Databases \& Tools:} MongoDB, MySQL, Git, AWS, Postman
+  \item \textbf{Frameworks \& Libraries:} TailwindCSS, React Testing Library
+\end{itemize}
+\vspace{-12pt}
+
+%-----------ACHIEVEMENTS-----------
+\section{ACHIEVEMENTS \& CERTIFICATIONS}
+\begin{itemize}[leftmargin=0.15in, label={\textcolor{headerBlue}{$\bullet$}}, itemsep=1pt]
+  \item \textbf{Technical Lead} at Electrical Engineering Society
+  \item Completed \textbf{Harvard University's CS50x} certification with distinction, developing a full-stack web app as the final project
+  \item \textbf{Full Stack Web Development Certification} from Udemy, building \textbf{20+} projects, including e-commerce platforms
+  \item Secured first position in the technical quiz competition at IET Lucknow among \textbf{20+} teams
+  \item \textbf{Active Open Source Contributor}, contributing \textbf{30+} merged pull requests to React.js and Node.js projects
+\end{itemize}
+
+\end{document}
